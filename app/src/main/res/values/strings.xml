@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RickAndMortyMVP</string>
+    <string name="character">Character</string>
+    <string name="location">Location</string>
+    <string name="episode">Episode</string>
+    <string name="name">Name:</string>
+    <string name="species">Species:</string>
+    <string name="status">Status:</string>
+    <string name="gender">Gender:</string>
+    <string name="avatar">avatar</string>
+    <string name="air_date">Air date:</string>
+    <string name="episode_with_double_dop">Episode:</string>
+    <string name="type">Type:</string>
+    <string name="dimension">Dimension:</string>
+    <string name="locations">Locations</string>
+    <string name="characters">Characters</string>
+    <string name="episodes">Episodes</string>
+</resources>
