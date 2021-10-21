@@ -24,12 +24,12 @@ class CloudRickAndMortyDataSource(private val api: RickAndMortyApi) : RickAndMor
     override fun loadLocationByUrl(url: String): Single<LocationResult> =
         api.loadLocations(url)
 
-    override fun loadEpisodes(): Single<EpisodesResult> =
+    override fun loadEpisodes(): Single<EpisodeResult> =
         api.loadEpisodes()
 
     override fun loadEpisodeById(id: Int): Single<Episode> =
         api.loadEpisodesById(id)
 
-    override fun loadEpisodesByUrl(url: String): Single<EpisodesResult> =
+    override fun loadEpisodesByUrl(url: String): Single<EpisodeResult> =
         api.loadEpisodes(url)
 }

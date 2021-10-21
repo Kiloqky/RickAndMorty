@@ -9,17 +9,19 @@ interface RickAndMortyRepository {
 
     fun loadCharacterById(id: Int): Single<Character>
 
-    fun loadNextPageCharacter(url: String): Single<CharacterResult>
+    fun loadCharactersByUrl(url: String): Single<CharacterResult>
 
-    fun loadEpisodes(): Single<EpisodesResult>
+    fun loadEpisodes(): Single<EpisodeResult>
 
     fun loadEpisodeById(id: Int): Single<Episode>
 
-    fun loadNextPageEpisode(url: String): Single<EpisodesResult>
+    fun loadEpisodesByUrl(url: String): Single<EpisodeResult>
 
     fun loadLocations(): Single<LocationResult>
 
     fun loadLocationById(id: Int): Single<Location>
 
     fun loadLocationByUrl(url: String): Single<LocationResult>
+
+    fun searchCharactersByName(name: String): Single<CharacterResult>
 }

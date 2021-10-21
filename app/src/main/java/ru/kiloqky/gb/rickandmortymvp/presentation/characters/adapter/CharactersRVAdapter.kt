@@ -19,14 +19,16 @@ class CharactersRVAdapter(
         override var pos = -1
 
         override fun setInfo(character: Character) {
-            binding.gender.text = character.gender.name
+            binding.gender.text = character.gender?.name
             binding.name.text = character.name
             binding.species.text = character.species
-            binding.status.text = character.status.name
-            imageLoader.loadInto(
-                character.imageUrl,
-                binding.avatar
-            )
+            binding.status.text = character.status?.name
+            character.imageUrl?.let {
+                imageLoader.loadInto(
+                    it,
+                    binding.avatar
+                )
+            }
         }
     }
 
