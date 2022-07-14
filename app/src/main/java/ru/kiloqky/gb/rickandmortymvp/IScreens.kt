@@ -16,4 +16,6 @@ interface IScreens {
     fun EpisodeScreen():FragmentScreen
 
     fun EpisodesScreen(): FragmentScreen
+
+    fun SearchCharactersFragment(): FragmentScreen
 }

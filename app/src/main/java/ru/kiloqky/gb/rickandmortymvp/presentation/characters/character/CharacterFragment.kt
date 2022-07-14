@@ -51,15 +51,17 @@ class CharacterFragment : AbsFragment(R.layout.fragment_character), CharacterVie
     }
 
     override fun init(character: Character) {
-        binding.gender.text = character.gender.name
-        binding.location.text = character.location.name
-        binding.status.text = character.status.name
+        binding.gender.text = character.gender?.name
+        binding.location.text = character.location?.name
+        binding.status.text = character.status?.name
         binding.name.text = character.name
         binding.species.text = character.species
-        imageLoader.loadInto(
-            character.imageUrl,
-            binding.avatar
-        )
+        character.imageUrl?.let {
+            imageLoader.loadInto(
+                it,
+                binding.avatar
+            )
+        }
     }
 
 

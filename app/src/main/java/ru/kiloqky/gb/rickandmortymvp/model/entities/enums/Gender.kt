@@ -1,4 +1,4 @@
-package ru.kiloqky.gb.rickandmortyapp.model.character.entities.enums
+package ru.kiloqky.gb.rickandmortymvp.model.entities.enums
 
 import com.google.gson.annotations.SerializedName
 

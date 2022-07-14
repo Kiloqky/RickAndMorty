@@ -1,27 +1,34 @@
 package ru.kiloqky.gb.rickandmortymvp.model.entities
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
-import ru.kiloqky.gb.rickandmortyapp.model.character.entities.enums.Gender
-import ru.kiloqky.gb.rickandmortyapp.model.character.entities.enums.Status
+import ru.kiloqky.gb.rickandmortymvp.model.entities.enums.Gender
+import ru.kiloqky.gb.rickandmortymvp.model.entities.enums.Status
 
 @Parcelize
+@Entity(tableName = "character_table")
 data class Character(
+    @PrimaryKey
     @SerializedName("id")
-    val id: Int,
+    var id: Int = 0,
     @SerializedName("name")
-    val name: String,
+    var name: String? = null,
     @SerializedName("species")
-    val species: String,
+    var species: String? = null,
     @SerializedName("status")
-    val status: Status,
+    var status: Status? = null,
     @SerializedName("gender")
-    val gender: Gender,
+    var gender: Gender? = null,
     @SerializedName("image")
-    val imageUrl: String,
+    var imageUrl: String? = null,
+    @Ignore
     @SerializedName("location")
-    val location: Location,
+    var location: Location? = null,
+    @Ignore
     @SerializedName("episode")
-    val episodesUrl: List<String>
+    var episodesUrl: List<String>? = null
 ) : Parcelable

@@ -18,6 +18,10 @@ class ScreensImpl : IScreens {
         CharactersFragment.newInstance()
     }
 
+    override fun SearchCharactersFragment() = FragmentScreen {
+        ru.kiloqky.gb.rickandmortymvp.presentation.characters.characters_search.SearchCharactersFragment.newInstance()
+    }
+
     override fun LocationScreen(): FragmentScreen {
         TODO("Not yet implemented")
     }

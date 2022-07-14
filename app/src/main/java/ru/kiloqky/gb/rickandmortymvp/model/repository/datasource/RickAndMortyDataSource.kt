@@ -10,11 +10,11 @@ interface RickAndMortyDataSource {
 
     fun loadCharactersByUrl(url: String): Single<CharacterResult>
 
-    fun loadEpisodes(): Single<EpisodesResult>
+    fun loadEpisodes(): Single<EpisodeResult>
 
     fun loadEpisodeById(id: Int): Single<Episode>
 
-    fun loadEpisodesByUrl(url: String): Single<EpisodesResult>
+    fun loadEpisodesByUrl(url: String): Single<EpisodeResult>
 
     fun loadLocation(): Single<LocationResult>
 

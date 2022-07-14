@@ -14,7 +14,7 @@ interface RickAndMortyApi {
     fun loadCharacterById(@Path("id") id: Int): Single<Character>
 
     @GET
-    fun loadEpisodes(@Url url: String = "https://rickandmortyapi.com/api/episode"): Single<EpisodesResult>
+    fun loadEpisodes(@Url url: String = "https://rickandmortyapi.com/api/episode"): Single<EpisodeResult>
 
     @GET("episode/{id}")
     fun loadEpisodesById(@Path("id") id: Int): Single<Episode>

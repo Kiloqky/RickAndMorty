@@ -7,7 +7,8 @@ import androidx.fragment.app.FragmentTransaction
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-class MainAppNavigator(activity: FragmentActivity, @IdRes id: Int) : AppNavigator(activity, id) {
+class MainAppNavigator(activity: FragmentActivity, @IdRes id: Int) :
+    AppNavigator(activity, id) {
     override fun setupFragmentTransaction(
         screen: FragmentScreen,
         fragmentTransaction: FragmentTransaction,
